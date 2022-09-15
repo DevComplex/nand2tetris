@@ -1,0 +1,17 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/02/FullAdder.hdl
+
+/**
+ * Computes the or of three bits.
+ */
+
+ CHIP Or3Way {
+    IN a, b, c;  // 1-bit inputs
+    OUT out;    
+
+    PARTS:
+    Or(a=a, b=b, out=aOrB);
+    Or(a=c, b=aOrB, out=out);
+}
